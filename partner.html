@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/style.js"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>CTCP TẬP ĐOÀN HÀO NAM</title>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  
+  <style>
+
+    .title-main{
+        font-weight: bold;
+    }
+    .content-main{
+        padding-bottom: 3rem;
+    }
+    .pagings{
+        display: flex;
+        justify-content: center;
+
+    }
+    .pagings a{
+        color: #999;
+    }
+    .paging{
+        transition: 0.5s;
+        font-weight: bold;
+        padding: 10px 18px;
+        margin: 5px;
+        border: 1px solid #dee2e6;
+    }
+    .paging:hover{
+        border: 1px solid black;
+    }
+    a .active{
+        color: black;
+        border: 1px solid black;
+    }
+</style>
+<div class="hotline">
+    <a href="tel:">
+        <div class="background-hotline">
+            <i class="fa-solid fa-phone"></i>
+        </div>
+    </a>
+</div>
+<div id="info-button" onclick="info_btn()" class="info-project">
+    <div class="icont-info">
+        <i class="fa fa-angles-right"></i>
+    </div>
+</div>
+<div class="form-info" id="close-info-form">
+    <div class="button-close" onclick="close_form()" >
+        <i class="fa fa-xmark"></i>
+    </div>
+    <div class="container overflow-hidden">
+        <h5>NHẬN THÔNG TIN DỰ ÁN</h5>
+        <p>Hồ sơ gồm: Bảng tính dòng tiền đầu tư, Bảng giá [New], Chính sách bán hàng [New], Hồ sơ thiết kế, Hợp đồng mua bán,... Tất cả trong 1 lần tải.</p>
+    <form action="" >
+        <div class="form-info-fix">
+            <input class="form-fix" type="text" placeholder="Họ và tên">
+        </div>
+        <div class="form-info-fix">
+            <input class="form-fix" type="text" placeholder="Số điện thoại">
+        </div>
+        <div class="form-info-fix">
+            <input class="form-fix" type="email" placeholder="Email">
+        </div>
+        <div class="btn-new-pro text-center btn-footer">
+            <a href="">
+                <button class="btn-fix-form">Gửi</button>
+            </a>
+        </div>
+    </form>
+    </div>
+</div>
+<div class="menu-show" id="menu-m">
+    <div class="show-menu">
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col-3 mr-auto d-flex">
+                    <h4 class="m-0">Menu</h4>
+                </div>
+                <div class="icont-close-menu" onclick="close_menu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <ul class="nav-mobile">
+                <li>
+                    <a href="">TRANG CHỦ</a>
+                </li>
+                <li>
+                    <a href="">GIỚI THIỆU</a>
+                </li>
+                <li>
+                    <div class="multi-item-nav">
+                        <a href="">TIN TỨC </a>
+                        <div onclick="open_nav_mobile_1()" id="plus1" class="ml-auto icont-mobile-nav"><i class="fas fa-plus"></i></div>
+                        <div id="minus1" onclick="close_nav_mobile_1()" class="ml-auto minus icont-mobile-nav"><i class="fas fa-minus"></i></div>
+                    </div>
+                    <ul class="item-mobile" id="open-nav-1">
+                        <li><a href="">Sắp mở bán</a></li>
+                        <li><a href="">Đã mở bán</a></li>
+                        <li><a href="">Đang mở bán</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="multi-item-nav" >
+                        <a href="">TIN TỨC </a>
+                        <div id="plus2" onclick="open_nav_mobile_2()" class="ml-auto icont-mobile-nav"><i class="fas fa-plus"></i></div>
+                        <div id="minus2" onclick="close_nav_mobile_2()" class="ml-auto minus icont-mobile-nav"><i class="fas fa-minus"></i></div>
+                    </div>
+                    <ul class="item-mobile" id="open-nav-2">
+                        <li><a href="">Tin tức Hào Nam Group</a></li>
+                        <li><a href="">Tin tức BĐS</a></li>
+                        <li><a href="">Thông tin báo chí</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">ĐỐI TÁC</a>
+                </li>
+                <li>
+                    <a href="">TUYỂN DỤNG</a>
+                </li>
+                <li>
+                    <a href="">LIÊN HỆ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="navbar-main fix">
+    <div class="mobile-logo text-center">
+        <img src="img/logo.jpg" alt="">
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light header-fix container">
+        <a class="navbar-brand mr-auto col-1" href="">
+            <img src="img/logo.jpg" alt="">
+        </a>
+        <div class="menu-mobile" id="menu" onclick="openmenu()">
+            <img src="img/menu.png" alt="">
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="home.html">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="introduce.html">GIỚI THIỆU</a>
+            </li>
+            <li class="nav-item show-drop-pro">
+              <a class="nav-link" href="#">SẢN PHẨM <i class="fa fa-angle-down"></i></a>
+                <ul class="drop-menu-pro" aria-labelledby="navbarDropdown">
+                    <li>
+                        <a href="" class="dropdown-item">Sắp mở bán</a>
+                    </li>
+                    <li>
+                        <a href="" class="dropdown-item">Đã mở bán</a>
+                    </li>
+                    <li>
+                        <a href="" class="dropdown-item">Đang mở bán</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item show-drop-news">
+              <a class="nav-link" href="news.html">TIN TỨC <i class="fa fa-angle-down"></i></a>
+              <ul class="drop-menu-news" aria-labelledby="navbarDropdown">
+                <li>
+                    <a href="" class="dropdown-item">Tin tức hào nam group</a>
+                </li>
+                <li>
+                    <a href="" class="dropdown-item">Tin tức BĐS</a>
+                </li>
+                <li>
+                    <a href="" class="dropdown-item">Thông tin báo chí</a>
+                </li>
+            </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="partner.html">ĐỐI TÁC</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="recruit.html">TUYỂN DỤNG</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">LIÊN HỆ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="group-icont pr-0">
+            <div class="search-navbar">
+                <i class="fa fa-magnifying-glass"></i>
+                <div class="form-down">
+                    <form action="" class="d-flex">
+                        <input type="text" placeholder="Từ khóa tìm kiếm" class="search-navbar-form">
+                        <button type="submit" class="btn-search-icont">TÌM KIẾM</button>
+                    </form>
+                </div>
+            </div>
+            <div class="change-language">
+                <img src="img/vietnam.png" alt="">
+                <img src="img/england.png" alt="">
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="banner-main">
+    <div class="title-banner">
+        <div class="content-banner">
+            <div class="title-content">
+                <h1>ĐỐI TÁC</h1>
+            </div>
+        </div>
+    </div>
+    <div class="shadow-banner"></div>
+    <div class="bg-moving"></div>
+</div>
+<div class="copy-right d-flex justify-content-center">
+    <p class="mb-0 p-2">Trang chủ ></p> <p class="hightlight-title mb-0 pt-2 pb-2 pr-2">Đối tác</p>
+</div>
+<div class="new-product mb-0 pb-2">
+    <div class="container">
+        <div class="new-pros">
+            <div class="row">
+                <div class="main-pro-news col-lg-3 col-6">
+                    <div class="news-pro">
+                        <div class="img-news">
+                            <a href="">
+                            <img src="img/phutho-ccn.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="title-news">
+                            <p class="h6">
+                                <a href="">Đất cụm công nghiệp bãi ba - đông thành</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-pro-news col-lg-3 col-6">
+                    <div class="news-pro">
+                        <div class="img-news">
+                            <a href="">
+                            <img src="img/phutho-ccn.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="title-news">
+                            <p class="h6">
+                                <a href="">Đất cụm công nghiệp bãi ba - đông thành</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-pro-news col-lg-3 col-6">
+                    <div class="news-pro">
+                        <div class="img-news">
+                            <a href="">
+                            <img src="img/phutho-ccn.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="title-news">
+                            <p class="h6">
+                                <a href="">Đất cụm công nghiệp bãi ba - đông thành</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-pro-news col-lg-3 col-6">
+                    <div class="news-pro">
+                        <div class="img-news">
+                            <a href="">
+                            <img src="img/phutho-ccn.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="title-news">
+                            <p class="h6">
+                                <a href="">Đất cụm công nghiệp bãi ba - đông thành</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-pro-news col-lg-3 col-6">
+                    <div class="news-pro">
+                        <div class="img-news">
+                            <a href="">
+                            <img src="img/phutho-ccn.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="title-news">
+                            <p class="h6">
+                                <a href="">Đất cụm công nghiệp bãi ba - đông thành</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="pagings">
+            <a href="">
+                <div class="paging active">1</div>
+            </a>
+            <a href="">
+                <div class="paging">2</div>
+            </a>
+            <a href="">
+                <div class="paging">3</div>
+            </a>
+            <a href="">
+                <div class="paging">4</div>
+            </a>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container footer-main">
+        <div class="row">
+            <div class="col-lg-4">
+                <h3 class="title-footer">công ty cổ phần tập đoàn hào nam</h3>
+                <p><b>Địa chỉ: </b>D31 Khu đấu giá Vạn Phúc - Hà Đông - Hà Nội</p>
+                <p><b>Điện thoại: </b>0986 026 664 - 093 685 9999</p>
+                <p><b>Email: </b>haonamgroup@gmail.com</p>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="title-footer">kết nối với chúng tôi</h3>
+                <div class="icont-footer d-flex">
+                    <a href="youtube.com/channel/UCVGTQEzhfmKXxnD_fSqfz7w"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <h3 class="title-footer">HOTLINE</h3>
+                <div class="phone-icont d-flex">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>0986.026.664</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="title-footer">nhận thông tin từ chúng tôi</h3>
+                <form action="">
+                    <div class="form-footer">
+                        <input class="footer-form" type="text" placeholder="Họ và tên">
+                    </div>
+                    <div class="form-footer">
+                        <input class="footer-form" type="text" placeholder="Số điện thoại">
+                    </div>
+                    <div class="form-footer">
+                        <input class="footer-form" type="email" placeholder="Email">
+                    </div>
+                    <div class="btn-new-pro text-center btn-footer">
+                        <a href="">
+                            <button>Đăng ký</button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="copy-right">
+    <p class="mb-0 p-2">Copyright © 2021 Hào Nam GROUP. All Right Reserved | Chính sách bảo mật thông tin</p>
+</div>
+<script type="text/javascript">
+    ScrollReveal({
+            reset:true,
+            distance: '50px',
+            duration: 1000,
+            delay: 200
+        });
+        ScrollReveal().reveal('.title-new-pro,.title-news,.title-relationship',{delay: 100, origin: 'top'});
+        ScrollReveal().reveal('.new-pro,.main-pro-news,.news-pro,.left-footer',{delay: 100, origin: 'left', interval: 100});
+        ScrollReveal().reveal('.btn-new-pro',{delay: 100, origin: 'bottom', interval: 100});
+        ScrollReveal().reveal('.right-footer',{delay: 100, origin: 'right', interval: 100});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  </body>
+</html> 

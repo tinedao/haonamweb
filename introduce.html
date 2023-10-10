@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/style.js"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>CTCP TẬP ĐOÀN HÀO NAM</title>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  
+  <style>
+
+    .title-main{
+        font-weight: bold;
+    }
+    .content-main{
+        padding-bottom: 3rem;
+    }
+    img{
+        width: 100%;
+    }
+    p a, small a{
+        color: #666 ;
+    }
+    p a:hover, small a:hover{
+        color: #c33 ;
+    }
+    .red-hori{
+        font-weight: bold;
+        color: #c33;
+    }
+    p{
+        margin-bottom: 0;
+    }
+    .img-banner{
+        width: 100%;
+        margin: 20px 0 0 0;
+    }
+    .content-contr{
+        color: #666;
+    }
+    .content-contr p{
+        word-wrap: break-word;
+    }
+    .share-area{
+        align-items: center;
+    }
+    .item-link{
+        font-size: 45px;
+    }
+    .title-comment{
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e3e3e3;
+    }
+    .title-comment span{
+        font-weight: bold;
+        padding-bottom: 12px;
+        border-bottom: 1px solid black;
+    }
+    .comment-area input{    
+        margin: 30px 0 10px 0;
+        width: 100%;
+        border: none;
+        background-color: #f5f5f5;
+        padding: 7px 0 7px 10px;
+    }
+    .comment-area input::placeholder{
+        font-size: 14px;
+    }
+    .comment-area input:focus-visible{
+        outline: none;
+    }
+    .btn-comment button{
+        transition: 0.5s;
+        border: none;
+        padding: 10px 10px;
+        background-color: #222;
+        color: white;
+    }
+    .btn-comment button:hover{
+        background-color: #c33;
+    }
+    .comment-area{
+        margin-bottom: 35px;
+    }
+    .comment-area span{
+        color: #666;
+        font-weight: bold;
+    }
+    .comment-area form{
+        position: relative;
+    }
+    .comment-area form i{
+        top: 40px;
+        right: 15px;
+        position: absolute;
+        color: #666;
+    }
+    .comment-area form i:hover{
+        color: #c33;
+    }
+    .title-commenter{
+        padding-bottom: 16px;
+        border-bottom: 1px solid #e3e3e3;
+    }
+    .title-commenter span{
+        font-size: 16px;
+    }
+</style>
+<div class="hotline">
+    <a href="tel:">
+        <div class="background-hotline">
+            <i class="fa-solid fa-phone"></i>
+        </div>
+    </a>
+</div>
+<div id="info-button" onclick="info_btn()" class="info-project">
+    <div class="icont-info">
+        <i class="fa fa-angles-right"></i>
+    </div>
+</div>
+<div class="form-info" id="close-info-form">
+    <div class="button-close" onclick="close_form()" >
+        <i class="fa fa-xmark"></i>
+    </div>
+    <div class="container overflow-hidden">
+        <h5>NHẬN THÔNG TIN DỰ ÁN</h5>
+        <p>Hồ sơ gồm: Bảng tính dòng tiền đầu tư, Bảng giá [New], Chính sách bán hàng [New], Hồ sơ thiết kế, Hợp đồng mua bán,... Tất cả trong 1 lần tải.</p>
+    <form action="" >
+        <div class="form-info-fix">
+            <input class="form-fix" type="text" placeholder="Họ và tên">
+        </div>
+        <div class="form-info-fix">
+            <input class="form-fix" type="text" placeholder="Số điện thoại">
+        </div>
+        <div class="form-info-fix">
+            <input class="form-fix" type="email" placeholder="Email">
+        </div>
+        <div class="btn-new-pro text-center btn-footer">
+            <a href="">
+                <button class="btn-fix-form">Gửi</button>
+            </a>
+        </div>
+    </form>
+    </div>
+</div>
+<div class="menu-show" id="menu-m">
+    <div class="show-menu">
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col-3 mr-auto d-flex">
+                    <h4 class="m-0">Menu</h4>
+                </div>
+                <div class="icont-close-menu" onclick="close_menu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <ul class="nav-mobile">
+                <li>
+                    <a href="">TRANG CHỦ</a>
+                </li>
+                <li>
+                    <a href="">GIỚI THIỆU</a>
+                </li>
+                <li>
+                    <div class="multi-item-nav">
+                        <a href="">TIN TỨC </a>
+                        <div onclick="open_nav_mobile_1()" id="plus1" class="ml-auto icont-mobile-nav"><i class="fas fa-plus"></i></div>
+                        <div id="minus1" onclick="close_nav_mobile_1()" class="ml-auto minus icont-mobile-nav"><i class="fas fa-minus"></i></div>
+                    </div>
+                    <ul class="item-mobile" id="open-nav-1">
+                        <li><a href="">Sắp mở bán</a></li>
+                        <li><a href="">Đã mở bán</a></li>
+                        <li><a href="">Đang mở bán</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="multi-item-nav" >
+                        <a href="">TIN TỨC </a>
+                        <div id="plus2" onclick="open_nav_mobile_2()" class="ml-auto icont-mobile-nav"><i class="fas fa-plus"></i></div>
+                        <div id="minus2" onclick="close_nav_mobile_2()" class="ml-auto minus icont-mobile-nav"><i class="fas fa-minus"></i></div>
+                    </div>
+                    <ul class="item-mobile" id="open-nav-2">
+                        <li><a href="">Tin tức Hào Nam Group</a></li>
+                        <li><a href="">Tin tức BĐS</a></li>
+                        <li><a href="">Thông tin báo chí</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">ĐỐI TÁC</a>
+                </li>
+                <li>
+                    <a href="">TUYỂN DỤNG</a>
+                </li>
+                <li>
+                    <a href="">LIÊN HỆ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="navbar-main fix">
+    <div class="mobile-logo text-center">
+        <img src="img/logo.jpg" alt="">
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light header-fix container">
+        <a class="navbar-brand mr-auto col-1" href="">
+            <img src="img/logo.jpg" alt="">
+        </a>
+        <div class="menu-mobile" id="menu" onclick="openmenu()">
+            <img src="img/menu.png" alt="">
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="home.html">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="introduce.html">GIỚI THIỆU</a>
+            </li>
+            <li class="nav-item show-drop-pro">
+              <a class="nav-link" href="#">SẢN PHẨM <i class="fa fa-angle-down"></i></a>
+                <ul class="drop-menu-pro" aria-labelledby="navbarDropdown">
+                    <li>
+                        <a href="" class="dropdown-item">Sắp mở bán</a>
+                    </li>
+                    <li>
+                        <a href="" class="dropdown-item">Đã mở bán</a>
+                    </li>
+                    <li>
+                        <a href="" class="dropdown-item">Đang mở bán</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item show-drop-news">
+              <a class="nav-link" href="news.html">TIN TỨC <i class="fa fa-angle-down"></i></a>
+              <ul class="drop-menu-news" aria-labelledby="navbarDropdown">
+                <li>
+                    <a href="" class="dropdown-item">Tin tức hào nam group</a>
+                </li>
+                <li>
+                    <a href="" class="dropdown-item">Tin tức BĐS</a>
+                </li>
+                <li>
+                    <a href="" class="dropdown-item">Thông tin báo chí</a>
+                </li>
+            </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="partner.html">ĐỐI TÁC</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="recruit.html">TUYỂN DỤNG</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">LIÊN HỆ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="group-icont pr-0">
+            <div class="search-navbar">
+                <i class="fa fa-magnifying-glass"></i>
+                <div class="form-down">
+                    <form action="" class="d-flex">
+                        <input type="text" placeholder="Từ khóa tìm kiếm" class="search-navbar-form">
+                        <button type="submit" class="btn-search-icont">TÌM KIẾM</button>
+                    </form>
+                </div>
+            </div>
+            <div class="change-language">
+                <img src="img/vietnam.png" alt="">
+                <img src="img/england.png" alt="">
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="banner-main">
+    <div class="title-banner">
+        <div class="content-banner">
+            <div class="title-content">
+                <h1>GIỚI THIỆU VỀ HÀO NAM GROUP</h1>
+            </div>
+        </div>
+    </div>
+    <div class="shadow-banner"></div>
+    <div class="bg-moving"></div>
+</div>
+<div class="copy-right d-flex justify-content-center">
+    <p class="mb-0 p-2">Trang chủ > Giới thiệu ></p> <p class="hightlight-title mb-0 pt-2 pb-2 pr-2">Giới thiệu Hào Nam Group</p>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-10">
+            <h3 class="title-main">Giới thiệu Hào Nam Group</h3>
+            <small>16:28 - 23/10/2021 <a href="" class="font-weight-bold pl-2"> GIỚI THIỆU</a></small>
+            <br>
+            <br>
+            <br>
+            <div class="content-introduce">
+                <h5><i class="red-hori">Giới Thiệu Hào Nam Group</i></h5>
+                <br>
+                <p>Được thành lập vào đầu năm 2019, <a href="" class="link-company"><b><i>Công Ty Cổ Phần Tập Đoàn Hào Nam</i></b></a> hoạt động với tôn chỉ là sự uy tín, chân thành, tận tâm phụng sự thể hiện bởi slogan <i class="red-hori">"TRAO GIÁ TRỊ - TẠO NIỀM TIN"</i></p>
+                <p>Được biết đến là <a href="" class="link-company"><b><i>Chủ Đầu Tư BĐS</i></b></a> đa phân khúc và là đối tác tin cậy của <a href=""><b><i>Quý Nhà Đầu Tư - Quý Khách Hàng</i></b></a> trong nước.</p>
+                <p>Chúng tôi luôn nỗ lực mang tới cơ hội <a href="" class="link-company"><b><i>ĐẦU TƯ NHỎ - SINH LỜI CAO</i></b></a> ,giúp <a href="" class="link-company"><b><i>Quý Nhà Đầu Tư - Quý Khách Hàng </i></b></a> nhỏ vẫn có thể sở hữu BĐS một cách dễ dàng.</p>
+                <p><a href="" class="link-company"><b><i>Hào Nam </i></b></a>đã và đang thành công với định hướng ban đầu là đào sâu, khai khác tốt vào phân khúc đất nền giá rẻ tại các tỉnh. Tới đây, Hào Nam tự tin sẽ phát triển theo định hướng phân khối đất nền đa phân khúc và đầu tư phát triển khu dân cư một cách đồng bộ để giúp <a href="" class="link-company"><b><i> Quý Nhà Đầu Tư - Quý Khách Hàng </i></b></a> có nhiều nhiều cơ hội sinh lời  bền vững hơn nữa khi đồng hành cùng <a href="" class="link-company"><b><i>Hào Nam.</i></b></a></p>
+                <p><a href="" class="link-company"><b><i>Tập Đoàn Hào Nam</i></b></a>đã xây dựng chiến lược riêng cho mình. Lấy trọng tâm là đầu tư xây dựng môi trường làm việc năng động, trẻ trung, hòa đồng và không ngừng nâng cao trình độ cho cán bộ, nhân viên thông qua các buổi đào tạo nghiệp vụ chuyên sâu. Giúp tạo nên uy tín <a href="" class="link-company"><b><i>Chủ Đầu Tư</i></b></a> và đặt nền móng vững chắc để Công Ty phát triển tốt nhất.</p>
+                <p>Tôn chỉ là sự uy tín, chân thành, tận tâm phụng sự thể hiện bởi slogan <i class="red-hori">"TRAO GIÁ TRỊ - TẠO NIỀM TIN"</i> - đến nay đã thực sự đi vào lòng các <a href="" class="link-company"><b><i>Quý Nhà Đầu Tư - Quý Khách Hàng</i></b></a> tại Việt Nam.</p>
+            </div>
+            <img src="img/introduce-banner1.jpg" class="img-banner" alt="">
+            <img src="img/produce-banner2.png" class="img-banner" alt="">
+
+            <div class="introduce-controllers mt-3 mb-3">
+                <div class="title-controler">
+                    <h4 class="text-center"><i class="red-hori">BAN LÃNH ĐẠO</i></h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-12">
+                        <img src="img/controller1.jpg" alt="">
+                        <div class="content-contr text-center">
+                            <h6 class="red-hori mt-3 mb-3">ÔNG: PHẠM NGỌC ANH</h6>
+                            <b>CHỦ TỊCH HĐQT</b>
+                            <p class="mt-2"><i>Công Ty Cổ Phần TẬP ĐOÀN HÀO NAM</i> phấn đấu đến năm 2022 trở thành một doanh nghiệp uy tín, chuyên nghiệp hàng đầu trong lĩnh vực BĐS VN; Phấn đấu trở thành Top 100 doanh nghiệp BĐS tiêu biểu ...</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-12">
+                        <img src="img/controller1.jpg" alt="">
+                        <div class="content-contr text-center">
+                            <h6 class="red-hori mt-3 mb-3">ÔNG: PHẠM NGỌC ANH</h6>
+                            <b>CHỦ TỊCH HĐQT</b>
+                            <p class="mt-2"><i>Công Ty Cổ Phần TẬP ĐOÀN HÀO NAM</i> phấn đấu đến năm 2022 trở thành một doanh nghiệp uy tín, chuyên nghiệp hàng đầu trong lĩnh vực BĐS VN; Phấn đấu trở thành Top 100 doanh nghiệp BĐS tiêu biểu ...</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-12">
+                        <img src="img/controller1.jpg" alt="">
+                        <div class="content-contr text-center">
+                            <h6 class="red-hori mt-3 mb-3">ÔNG: PHẠM NGỌC ANH</h6>
+                            <b>CHỦ TỊCH HĐQT</b>
+                            <p class="mt-2"><i>Công Ty Cổ Phần TẬP ĐOÀN HÀO NAM</i> phấn đấu đến năm 2022 trở thành một doanh nghiệp uy tín, chuyên nghiệp hàng đầu trong lĩnh vực BĐS VN; Phấn đấu trở thành Top 100 doanh nghiệp BĐS tiêu biểu ...</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-12">
+                        <img src="img/controller1.jpg" alt="">
+                        <div class="content-contr text-center">
+                            <h6 class="red-hori mt-3 mb-3">ÔNG: PHẠM NGỌC ANH</h6>
+                            <b>CHỦ TỊCH HĐQT</b>
+                            <p class="mt-2"><i>Công Ty Cổ Phần TẬP ĐOÀN HÀO NAM</i> phấn đấu đến năm 2022 trở thành một doanh nghiệp uy tín, chuyên nghiệp hàng đầu trong lĩnh vực BĐS VN; Phấn đấu trở thành Top 100 doanh nghiệp BĐS tiêu biểu ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 mb-5">
+                    <div class="d-flex share-area">
+                        <b>Chia sẻ:</b>
+                        <div class="list-link">
+                            <a href="" class="item-link m-2">
+                                <i style="color:#365493 !important" class="fab fa-facebook-square"></i>
+                            </a>
+                        </div>
+                        <div class="list-link">
+                            <a href="" class="item-link m-2">
+                                <i style="color:#3cf !important" class="fab fa-twitter-square"></i>
+                            </a>
+                        </div>
+                        <div class="list-link">
+                            <a href="" class="item-link m-2">
+                                <i style="color:#d44132 !important" class="fab fa-google-plus-square"></i>
+                            </a>
+                        </div>
+                        <div class="list-link">
+                            <a href="" class="item-link m-2">
+                                <i style="color:#cb2027 !important" class="fab fa-pinterest-square"></i>
+                            </a>
+                        </div>
+                        <div class="list-link">
+                            <a href="" class="item-link m-2">
+                                <i style="color:#0274b3 !important" class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-area">
+                    <div class="title-comment mb-2">
+                        <span>BÌNH LUẬN</span>
+                    </div>
+                    <form action="" class="mb-5">
+                        <input type="text" placeholder="Mời bạn để lại bình luận">
+                        <i class="fas fa-camera"></i>
+                        <div class="btn-comment">
+                            <button>Gửi bình luận</button>
+                        </div>
+                    </form>
+                    <div class="comment-viewer">
+                        <div class="title-commenter">
+                            <span>Bình luận</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <h4 class="mb-4"><b>BÀI VIẾT MỚI</b></h4>
+            <small style="color: #666;"><b>Không có dữ liệu</b></small>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container footer-main">
+        <div class="row">
+            <div class="col-lg-4">
+                <h3 class="title-footer">công ty cổ phần tập đoàn hào nam</h3>
+                <p><b>Địa chỉ: </b>D31 Khu đấu giá Vạn Phúc - Hà Đông - Hà Nội</p>
+                <p><b>Điện thoại: </b>0986 026 664 - 093 685 9999</p>
+                <p><b>Email: </b>haonamgroup@gmail.com</p>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="title-footer">kết nối với chúng tôi</h3>
+                <div class="icont-footer d-flex">
+                    <a href="youtube.com/channel/UCVGTQEzhfmKXxnD_fSqfz7w"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <h3 class="title-footer">HOTLINE</h3>
+                <div class="phone-icont d-flex">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>0986.026.664</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="title-footer">nhận thông tin từ chúng tôi</h3>
+                <form action="">
+                    <div class="form-footer">
+                        <input class="footer-form" type="text" placeholder="Họ và tên">
+                    </div>
+                    <div class="form-footer">
+                        <input class="footer-form" type="text" placeholder="Số điện thoại">
+                    </div>
+                    <div class="form-footer">
+                        <input class="footer-form" type="email" placeholder="Email">
+                    </div>
+                    <div class="btn-new-pro text-center btn-footer">
+                        <a href="">
+                            <button>Đăng ký</button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="copy-right">
+    <p class="mb-0 p-2">Copyright © 2021 Hào Nam GROUP. All Right Reserved | Chính sách bảo mật thông tin</p>
+</div>
+<script type="text/javascript">
+    ScrollReveal({
+            reset:true,
+            distance: '50px',
+            duration: 1000,
+            delay: 200
+        });
+        ScrollReveal().reveal('.title-new-pro,.title-news,.title-relationship',{delay: 100, origin: 'top'});
+        ScrollReveal().reveal('.new-pro,.main-pro-news,.news-pro,.left-footer',{delay: 100, origin: 'left', interval: 100});
+        ScrollReveal().reveal('.btn-new-pro',{delay: 100, origin: 'bottom', interval: 100});
+        ScrollReveal().reveal('.right-footer',{delay: 100, origin: 'right', interval: 100});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  </body>
+</html> 
